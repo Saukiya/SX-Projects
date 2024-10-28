@@ -35,12 +35,10 @@ const config = {
     locales: ['zh', 'en'],
     localeConfigs: {
       zh: {
-        label: '中文',
-        htmlLang: 'zh-Hans'
+        label: '中文'
       },
       en: {
-        label: 'English',
-        htmlLang: 'en-US'
+        label: 'English'
       }
     }
   },
