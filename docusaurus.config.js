@@ -186,6 +186,7 @@ const config = {
         ],
       },
       prism: {
+        additionalLanguages: ['java'], // 添加 Java 支持
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },

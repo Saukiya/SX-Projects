@@ -9,7 +9,9 @@ public class TestCommand extend SubCommand {
     public void test() {
         System.out.println("HelloWorld!");
     }
+
 }
+
 ```
   </TabItem>
   <TabItem value="orange" label="Kotlin">
@@ -20,5 +22,6 @@ class TestCommand : SubCommand() {
     }
 }
 ```
+
   </TabItem>
 </Tabs>
