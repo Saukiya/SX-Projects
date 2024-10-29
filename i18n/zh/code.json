@@ -1,5 +1,8 @@
 {
-  "test.localization": {
-    "message": "测试!"
+  "index.tagline": {
+    "message": "插件集合"
+  },
+  "Start": {
+    "message": "开始"
   }
 }

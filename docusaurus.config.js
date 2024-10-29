@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+
 const project = "SX-Projects";
 
 /** @type {import('@docusaurus/types').Config} */
@@ -78,7 +79,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -91,9 +92,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docusaurusSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docusaurus',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -104,7 +105,23 @@ const config = {
           {
             type: 'localeDropdown',
             position: 'right',
-          }
+          },
+          {
+            label: 'Projects',  // 下拉菜单标题
+            position: 'left',  // 下拉菜单位置
+            items: [  // 下拉菜单项
+              {
+                type: 'docSidebar',
+                label: 'SX-Item',
+                // to: 'docs/SX-Item',
+                sidebarId: 'sxItemManual',
+              },
+              {
+                label: 'SX-Attribute',
+                to: 'docs/SX-Attribute',
+              },
+            ],
+          },
         ],
       },
       footer: {
@@ -172,6 +189,9 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      // tableOfContents: {
+      //   maxHeadingLevel: 2,
+      // }
     }),
 };
 
