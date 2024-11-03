@@ -124,75 +124,21 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Projects',
-            items: [
-              {
-                label: 'SX-Item',
-                href: `https://github.com/Saukiya/SX-Item/`,
-              },
-              {
-                label: 'SX-Attribute',
-                href: `https://github.com/Saukiya/SX-Attribute/`,
-              },
-              {
-                label: 'SX-Menu',
-                href: `https://github.com/Saukiya/SX-Menu/`,
-              },
-            ],
-          },
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          {
-            title: 'More',
-            items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
-              {
-                label: 'GitHub',
-                href: `https://github.com/${project}/`,
-              },
-            ],
-          },
-        ],
-      },
       prism: {
         additionalLanguages: ['java'], // 添加 Java 支持
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      // tableOfContents: {
-      //   maxHeadingLevel: 2,
-      // }
+      docs: {
+        sidebar: {
+          hideable: true,
+        }
+      },
+      hideTableOfContents: true,
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+      },
     }),
 };
 

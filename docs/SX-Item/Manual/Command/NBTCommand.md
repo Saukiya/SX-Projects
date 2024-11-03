@@ -21,13 +21,13 @@ sidebar_position: 4
 
 ### 示例
 
-玩家:
+#### 玩家
 
 - `/si nbt` - 查看手持物品的NBT标签
 - `/si nbt set SXItem.ItemKey Default-1` - 设置手持物品的指定NBT
 - `/si nbt remove SXItem` - 移除手持物品的指定NBT
 
-控制台:
+#### 控制台
 
 - `/si nbt Default-1` - 查看`Default-1`的NBT标签
 - `/si nbt Default-1 player` - 查看`Default-1`的NBT标签 (通过`player`生成)
