@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # 物品配置
 
 :heavy_check_mark: :x: :warning: :hourglass:
@@ -32,27 +35,27 @@ Demo:
 
 ## 可选参数
 
-| 字段名                         | 字段介绍            | 示例参数                                                 | [表达式](../Expression) |
-|:----------------------------|:----------------|:-----------------------------------------------------|:--------------------:|
-| [Name](#name)               | 名称              | `自定义的物品名称`                                           |  :heavy_check_mark:  |
-| [ID](id)                    | 材质ID            | `APPLE` / `267`                                      |  :heavy_check_mark:  |
-| [Durability](#durability)   | 耐久度             | `20` / `<20` / `20%`                                 |  :heavy_check_mark:  |
-| [Amount](#amount)           | 数量              | `1` / `<i:1_5>`                                      |  :heavy_check_mark:  |
-| [Lore](#lore)               | 描述              | - `多行文本1`<br/> - `多行文本2`                             |  :heavy_check_mark:  |
-| [EnchantList](#enchantlist) | 附魔列表            | `附魔名称:等级` / `DURABILITY:1`                           |  :heavy_check_mark:  |
-| ItemFlagList                | 隐藏选项            | `HIDE_ENCHANTS` / `HIDE_ATTRIBUTES`                  |         :x:          |
-| Attributes                  | 原版属性            | `属性名:等级:模式:生效位置`<br/>`GENERIC_MAX_HEALTH:0.5:1:HAND` |  :heavy_check_mark:  |
-| Unbreakable                 | 是否为无限耐久         | `true` / `false`                                     |  :heavy_check_mark:  |
-| Potion                      | 药水效果            | 复杂类型                                                 |  :heavy_check_mark:  |
-| SkullName                   | 玩家头颅的展示ID       | `Saukiya`<br/>`fha0cd1e-3ehb-4h01-aa95-d2f008908f49` |  :heavy_check_mark:  |
-| Color                       | 皮革物品颜色          | `000000` / `FFFFFF`                                  |  :heavy_check_mark:  |
-| CustomModelData             | 自定义材质ID         | `自定义材质ID` / `1000`                                   |         :x:          |
-| ClearAttribute              | 清除默认属性          | `true` / `false`                                     |         :x:          |
-| NBT                         | 自定义标签           | 复杂类型                                                 |  :heavy_check_mark:  |
-| Components                  | 自定义组件 [1.21.1+] | 复杂类型                                                 |         :x:          |
-| ProtectNBT                  | 保护NBT不被更新覆盖     | - `Enchantments`                                     |         :x:          |
-| Update                      | 自动更新            | `true` / `false`                                     |         :x:          |
-| Random                      | 局部随机            | 复杂类型                                                 |  :heavy_check_mark:  |
+| 字段名                           | 字段介绍            | 示例参数                                                 | [表达式](../Expression) |
+|:------------------------------|:----------------|:-----------------------------------------------------|:--------------------:|
+| [Name](#name)                 | 名称              | `自定义的物品名称`                                           |  :heavy_check_mark:  |
+| [ID](id)                      | 材质ID            | `APPLE` / `267`                                      |  :heavy_check_mark:  |
+| [Durability](#durability)     | 耐久度             | `20` / `<20` / `20%`                                 |  :heavy_check_mark:  |
+| [Amount](#amount)             | 数量              | `1` / `<i:1_5>`                                      |  :heavy_check_mark:  |
+| [Lore](#lore)                 | 描述              | - `多行文本1`<br/> - `多行文本2`                             |  :heavy_check_mark:  |
+| [EnchantList](#enchantlist)   | 附魔列表            | `附魔名称:等级` / `DURABILITY:1`                           |  :heavy_check_mark:  |
+| [ItemFlagList](#itemflaglist) | 隐藏选项            | `HIDE_ENCHANTS` / `HIDE_ATTRIBUTES`                  |         :x:          |
+| Attributes                    | 原版属性            | `属性名:等级:模式:生效位置`<br/>`GENERIC_MAX_HEALTH:0.5:1:HAND` |  :heavy_check_mark:  |
+| Unbreakable                   | 是否为无限耐久         | `true` / `false`                                     |  :heavy_check_mark:  |
+| Potion                        | 药水效果            | 复杂类型                                                 |  :heavy_check_mark:  |
+| SkullName                     | 玩家头颅的展示ID       | `Saukiya`<br/>`fha0cd1e-3ehb-4h01-aa95-d2f008908f49` |  :heavy_check_mark:  |
+| Color                         | 皮革物品颜色          | `000000` / `FFFFFF`                                  |  :heavy_check_mark:  |
+| CustomModelData               | 自定义材质ID         | `自定义材质ID` / `1000`                                   |         :x:          |
+| ClearAttribute                | 清除默认属性          | `true` / `false`                                     |         :x:          |
+| NBT                           | 自定义标签           | 复杂类型                                                 |  :heavy_check_mark:  |
+| Components                    | 自定义组件 [1.21.1+] | 复杂类型                                                 |         :x:          |
+| ProtectNBT                    | 保护NBT不被更新覆盖     | - `Enchantments`                                     |         :x:          |
+| Update                        | 自动更新            | `true` / `false`                                     |         :x:          |
+| Random                        | 局部随机            | 复杂类型                                                 |  :heavy_check_mark:  |
 
 ## 参数详情
 
@@ -95,7 +98,7 @@ Demo:
 <br/>
 
 - ### Amount
-  物品数量, 单次使用 `/si give Demo` 时给予的数量
+  - 物品数量, 单次使用 `/si give Demo` 时给予的数量
   ```yaml
   Demo:
     Amount: 20 # 一次给与20个
@@ -104,7 +107,7 @@ Demo:
 <br/>
 
 - ### Lore
-  物品描述, 如果配置错误, 需要注意双引号`"`和`'`的区别
+  - 可以使用 `/n` 换行
   ```yaml
   Demo:
     Lore:
@@ -115,11 +118,25 @@ Demo:
 <br/>
 
 - ### EnchantList
-  附魔列表 -> [参考链接](https://minecraft.fandom.com/zh/wiki/%E9%99%84%E9%AD%94)
+  - 为物品添加附魔效果
+  - 格式: "附魔类型:等级"
+  -
+  资料: [WIKI](https://zh.minecraft.wiki/w/%E9%AD%94%E5%92%92#%E6%89%80%E6%9C%89%E9%AD%94%E5%92%92) | [API](https://bukkit.windit.net/javadoc/org/bukkit/enchantments/Enchantment.html)
   ```yaml
   Demo:
     EnchantList:
-    - "DURABILITY:1"
+    - "SHARPNESS:1"
+  ```
+
+<br/>
+
+- ### ItemFlagList
+  用于属性、附魔、无限耐久、药水效果、染色等信息
+  - 资料: [API](https://bukkit.windit.net/javadoc/org/bukkit/inventory/ItemFlag.html)
+  ```yaml
+  Demo:
+    ItemFlagList:
+    - HIDE_ENCHANTS
   ```
 
 <br/>
@@ -130,3 +147,38 @@ Demo:
   Demo:
     XXX:
   ```
+
+<br/>
+
+- ### XXX
+  XX
+  ```yaml
+  Demo:
+    XXX:
+  ```
+
+  <Tabs>
+    <TabItem value="apple" label="Java" default>
+
+  ```java
+  public class TestCommand extend SubCommand {
+  
+      public void test() {
+          System.out.println("HelloWorld!");
+      }
+  
+  }
+  
+  ```
+    </TabItem>
+    <TabItem value="orange" label="Kotlin">
+
+  ```kotlin
+  class TestCommand : SubCommand() {
+      fun test() {
+          println("Hello, World!")
+      }
+  }
+  ```
+    </TabItem>
+  </Tabs>
